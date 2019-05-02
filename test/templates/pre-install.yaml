@@ -24,7 +24,7 @@ spec:
       - name: pre-install-job
         image: "{{ .Values.image.image }}:{{ .Values.image.tag }}"
         command:
-         - "bin/bash"
+         - "/bin/bash"
          - "-c"
          - {{.Values.command | quote }}
       imagePullSecrets:
