@@ -23,7 +23,9 @@ spec:
       containers:
       - name: pre-install-job
         image: "{{ .Values.image.image }}:{{ .Values.image.tag }}"
-        command: ["/bin/bash"]
-        args: ["-c", {{.Values.command | quote }}]
+        command:
+         - "bin/bash"
+         - "-c"
+         - {{.Values.command | quote }}
       imagePullSecrets:
         - name: registrysecret
