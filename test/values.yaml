@@ -8,4 +8,4 @@ imageCredentials:
     registry: https://xdc-k8s.docker.repositories.sap.ondemand.com/
     username: 
     password: 
-command: kubectl label namespace cert-manager hecertmanager.k8s.io/disable-validation=true
+command: kubectl label namespace cert-manager certmanager.k8s.io/disable-validation=true
