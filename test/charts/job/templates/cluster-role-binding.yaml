@@ -2,9 +2,6 @@ apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding
 metadata:
   name: kube-lego
-  annotations:
-    # This is what defines this resource as a hook. Without this line, the
-    # job is considered part of the release.
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
