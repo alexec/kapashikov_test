@@ -1,0 +1,11 @@
+# Default values for certification-manager.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+image:
+  image: xdc-k8s.docker.repositories.sap.ondemand.com/toolset-image-cd
+  tag: latest
+imageCredentials:
+    registry: https://xdc-k8s.docker.repositories.sap.ondemand.com/
+    username:
+    password:
+command: kubectl create namespace cert-manager;kubectl apply -f https://raw.githubusercontent.com/jetstack/cert-manager/release-0.6/deploy/manifests/00-crds.yaml;kubectl label namespace cert-manager certmanager.k8s.io/disable-validation=true
