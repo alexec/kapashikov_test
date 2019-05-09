@@ -118,7 +118,3 @@ affinity: {}
 #     value: master
 #     effect: NoSchedule
 tolerations: []
-
-imageCredentials:
-    username:
-    password:
