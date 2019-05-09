@@ -2,10 +2,6 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 image:
-  image: xdc-k8s.docker.repositories.sap.ondemand.com/toolset-image-cd
+  image: bitnami/kubectl
   tag: latest
-imageCredentials:
-    registry: https://xdc-k8s.docker.repositories.sap.ondemand.com/
-    username:
-    password:
-command: kubectl label namespace cert-manager certmanager.k8s.io/disable-validation=true
+command: kubectl label namespace cert-manager certmanager.k8s.io/disable-validation=true --overwrite

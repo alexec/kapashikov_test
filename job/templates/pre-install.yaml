@@ -21,5 +21,3 @@ spec:
         image: "{{ .Values.image.image }}:{{ .Values.image.tag }}"
         command: ["/bin/bash"]
         args: ["-c", {{.Values.command | quote }}]
-      imagePullSecrets:
-        - name: registrysecret
